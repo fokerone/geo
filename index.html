@@ -2,6 +2,6 @@
 <div id="geo"></div>
 
 <script>
-navigator.geolocation.getCurrentPosition((position) => { document.getElementById("geo").innerHTML = position})
+navigator.geolocation.getCurrentPosition((position) => { document.getElementById("geo").innerHTML = JSON.stringify(position)})
 </script>
 </html>
