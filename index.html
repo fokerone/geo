@@ -5,12 +5,12 @@
 <script>
 const div = document.getElementById("geo");
   const div2 = document.getElementById("otro");
-navigator.geolocation.getCurrentPosition((position) => { 
+navigator.geolocation.getCurrentPosition((position, {enableHighAccuracy:true}) => { 
   const loc = position;
   const f = JSON.stringify(loc);
   console.log(loc);
   div.innerHTML = f;
   div2.innerHTML = loc.coords.latitude;
-}, {enableHighAccuracy:true});
+});
 </script>
 </html>
